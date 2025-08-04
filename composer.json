@@ -1,0 +1,17 @@
+{
+    "name": "exau/api",
+    "require": {
+        "firebase/php-jwt": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Exau\\Api\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "FreilaN2",
+            "email": "exauserrano24@gmail.com"
+        }
+    ]
+}
