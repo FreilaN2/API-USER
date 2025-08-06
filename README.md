@@ -1,19 +1,27 @@
-# API RESTful
+# API RESTful - Prueba Técnica Backend PHP
 
-## Requisitos
+Esta API permite gestionar usuarios con funciones de registro, login con JWT, perfil y paginación. Fue desarrollada como parte de una prueba técnica usando PHP y MySQL.
+
+---
+
+## ✅ Requisitos
 
 - PHP >= 7.4 (idealmente PHP 8+)
 - Servidor web con soporte PHP (Apache, Nginx, etc.)
 - Composer (para manejo de dependencias)
 - Base de datos MySQL o MariaDB
+- XAMPP recomendado para pruebas locales
 
-## Instalación
+---
 
-1. Clonar el repositorio:
+## ⚙️ Instalación
+
+### 1. Clonar el repositorio
 
 ```bash
 git clone https://github.com/FreilaN2/API-USER.git
 cd API-USER
+
 
 2. Instalar dependencias:
 
