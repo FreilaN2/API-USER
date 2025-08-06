@@ -16,7 +16,7 @@ class AuthController {
 
         // Validar formato de email
         if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-            return ['status' => 400, 'message' => 'El email no es válido'];
+            return ['status' => 400, 'message' => 'El email no es valido'];
         }
 
         // Validar seguridad de contraseña
@@ -46,14 +46,14 @@ class AuthController {
 
     public function login($data) {
         if (!isset($data['email'], $data['password'])) {
-            return ['status' => 400, 'message' => 'Email y contraseña requeridos'];
+            return ['status' => 400, 'message' => 'Email y contrasena requeridos'];
         }
 
         $userModel = new User($this->db);
         $userData = $userModel->findByEmail($data['email']);
 
         if (!$userData || !password_verify($data['password'], $userData['password_hash'])) {
-            return ['status' => 401, 'message' => 'Credenciales inválidas'];
+            return ['status' => 401, 'message' => 'Credenciales invalidas'];
         }
 
         // Generar payload para el token
