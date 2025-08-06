@@ -64,3 +64,33 @@ php -S localhost:8000 -t public
 ```
 
 ## Prueba
+
+Para realizar las pruebas puede utilizar curl, a continuación se presentan los comandos necesarios para realizar las pruebas:
+
+Registro de usuario
+```
+curl -X POST http://localhost:8000/register \
+  -H "Content-Type: application/json" \
+  -d '{"nombre":"usuario","email":"usuario@example.com","password":"MiContraseña123!"}'
+```
+
+Login
+```
+curl -X POST http://localhost:8000/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"usuario@example.com","password":"MiContraseña123!"}'
+```
+
+Ver perfil
+```
+curl -X GET http://localhost:8000/profile \
+  -H "Authorization: Bearer TU_TOKEN"
+```
+
+Listar usuarios
+```
+curl -X GET "http://localhost:8000/users?page=1&limit=5" \
+  -H "Authorization: Bearer TU_TOKEN"
+```
+
+
