@@ -55,7 +55,7 @@ class Database {
 
 4. Importar la BD:
 
-El archivo database.sql debe importarlo en su gestor de base de datos, tenga en cuenta que este archivo solo crea la tabla de users, por lo que deberá crear antes la BD y luego importar el archivo dentro de la misma.
+El archivo database.sql debe importarlo en su gestor de base de datos, tenga en cuenta que este archivo solo crea la tabla de users, por lo que deberá crear antes la BD y luego importar el archivo dentro de la misma. Cabe resaltar que ya existe un usuario admin registrado, la contraseña es Jesus15*, sin embargo, puede registrar otro usuario y luego cambiarle el rol en el gestor de BD.
 
 5. Levantar el servidor local:
 
