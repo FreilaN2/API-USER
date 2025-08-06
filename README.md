@@ -55,7 +55,7 @@ class Database {
 
 4. Importar la BD:
 
-El archivo database.sql debe importarlo en su gestor de base de datos, tenga en cuenta que este archivo solo crea la tabla de users, por lo que deberá crear antes la BD y luego importar el archivo dentro de la misma (debe considerar el nombre que le pondrá a la BD, de no ser "api", debe cambiarlo en el archivo database.php para evitar errores)
+El archivo database.sql debe importarlo en su gestor de base de datos, tenga en cuenta que este archivo solo crea la tabla de users, por lo que deberá crear antes la BD y luego importar el archivo dentro de la misma.
 
 5. Levantar el servidor local:
 
@@ -65,7 +65,7 @@ php -S localhost:8000 -t public
 
 ## Prueba
 
-Para realizar las pruebas puede utilizar curl, a continuación se presentan los comandos necesarios para realizar las pruebas:
+Para realizar las pruebas puede utilizar curl (desde VS Code debe abrir Git bash para utilizar los comandos), a continuación se presentan los comandos necesarios para realizar las pruebas:
 
 Registro de usuario
 ```
@@ -92,5 +92,3 @@ Listar usuarios
 curl -X GET "http://localhost:8000/users?page=1&limit=5" \
   -H "Authorization: Bearer TU_TOKEN"
 ```
-
-
