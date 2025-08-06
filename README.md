@@ -47,6 +47,7 @@ class Database {
         return $this->conn;
     }
 }
+?>
 
 4. Importar la BD:
 
