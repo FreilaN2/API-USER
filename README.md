@@ -71,14 +71,14 @@ Registro de usuario
 ```
 curl -X POST http://localhost:8000/register \
   -H "Content-Type: application/json" \
-  -d '{"nombre":"usuario","email":"usuario@example.com","password":"MiContraseña123!"}'
+  -d '{"name":"Usuario","email":"usuario@example.com","password":"Clave15*"}'
 ```
 
 Login
 ```
 curl -X POST http://localhost:8000/login \
   -H "Content-Type: application/json" \
-  -d '{"email":"usuario@example.com","password":"MiContraseña123!"}'
+  -d '{"email":"usuario@example.com","password":"Clave15*"}'
 ```
 
 Ver perfil

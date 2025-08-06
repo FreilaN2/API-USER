@@ -34,14 +34,27 @@ class User {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function getAllPaginated($page = 1, $limit = 10) {
+    public function getAllPaginated($page, $limit) {
     $offset = ($page - 1) * $limit;
-    $query = "SELECT id, name, email, role, created_at FROM {$this->table} ORDER BY id ASC LIMIT :limit OFFSET :offset";
+
+    // Obtener usuarios
+    $query = "SELECT id, name, email FROM users LIMIT :limit OFFSET :offset";
     $stmt = $this->conn->prepare($query);
-    $stmt->bindValue(':limit', (int)$limit, PDO::PARAM_INT);
-    $stmt->bindValue(':offset', (int)$offset, PDO::PARAM_INT);
+    $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+    $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
     $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Obtener total
+    $totalQuery = $this->conn->query("SELECT COUNT(*) as total FROM users");
+    $total = $totalQuery->fetch(PDO::FETCH_ASSOC)['total'];
+
+    return [
+        'total' => (int)$total,
+        'current_page' => $page,
+        'per_page' => $limit,
+        'data' => $usuarios
+    ];
 }
 
 }

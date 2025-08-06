@@ -8,6 +8,8 @@ require_once '../config/database.php';
 require_once '../app/Controllers/AuthController.php';
 require_once '../vendor/autoload.php';
 require_once '../app/Middleware/AuthMiddleware.php';
+require_once '../app/Models/User.php';
+
 
 
 // Obtener URI y método HTTP
@@ -71,11 +73,13 @@ if ($uri === '/users' && $method === 'GET') {
     http_response_code(200);
     echo json_encode([
         'message' => 'Usuarios paginados',
-        'data' => $usuarios
+        'total' => $usuarios['total'],
+        'current_page' => $usuarios['current_page'],
+        'per_page' => $usuarios['per_page'],
+        'data' => $usuarios['data']
     ]);
     exit;
 }
-
 
 // Ruta no encontrada
 http_response_code(404);
