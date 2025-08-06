@@ -1,0 +1,25 @@
+# Ignorar dependencias instaladas por Composer
+/vendor/
+
+# Ignorar archivos de entorno (en caso de usarlos)
+.env
+
+# Archivos de caché o logs
+*.log
+*.tmp
+
+# Configuraciones de IDE
+.vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar PHPUnit resultados y cobertura si en el futuro agregas pruebas
+.phpunit.result.cache
+coverage/
+
+# Archivos del sistema que no necesitas versionar
+*.bak
+*.swp
