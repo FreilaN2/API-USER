@@ -21,6 +21,7 @@ Esta API permite gestionar usuarios con funciones de registro, login con JWT, pe
 ```bash
 git clone https://github.com/FreilaN2/API-USER.git
 cd API-USER
+```
 
 
 2. Instalar dependencias:
